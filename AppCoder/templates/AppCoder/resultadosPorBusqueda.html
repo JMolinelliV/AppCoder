@@ -1,0 +1,23 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    {% if cursos %}
+
+    <p>Buscando camada {{camada}}</p>
+
+    <ul>
+    {% for curso in cursos %}
+        <li>{{curso.nombre}}</li>
+        <li>{{curso.camada}}</li>
+    {% endfor %}
+    </ul>
+
+    {% else %}
+    <p>No hay datos para esa camada.</p>
+
+    {% endif %}
+    
+{% endblock %}
